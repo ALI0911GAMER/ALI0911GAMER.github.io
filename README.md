@@ -2,7 +2,7 @@
 <html lang="fa-ir" dir="rtl">
 <head>
     <title>اولین سایت سید بتمن!</title>
-    <link rel="icon" href="images/IMG_20260318_022357.jpg" type="image/x-icon" />
+    <link rel="icon" href="IMG_20260318_022357.jpg" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="description" content="سایت پا ساز ساخته شده توسط بتمن گوشامی" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
@@ -29,9 +29,9 @@
     <br />
     <section>
         <div style="text-align: center; display: flex; align-items: center; justify-content: center; gap: 15px;">
-            <img src="images/o.png" alt="icon" width="30" />
+            <img src="o.png" alt="icon" width="30" />
             <h2 style="margin: 0; font-size: 28px; font-family: Tahoma, sans-serif;">TIC TAC TOE</h2>
-            <img src="images/x.png" alt="icon" width="25" />
+            <img src="x.png" alt="icon" width="25" />
         </div>
         <div style="align-items: center;" align="center">
             <table width="80%" height="250" border="10" bordercolor="red" cellspacing="0">
@@ -39,21 +39,21 @@
                     <td>
                         <label class="label" onclick="_1()">
                             <span id="1" class="o" >
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
                     <td>
                         <label class="label" onclick="_2()">
                             <span id="2" class="o" >
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
                     <td>
                         <label class="label" onclick="_3()">
                             <span id="3" class="o" >
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
@@ -62,21 +62,21 @@
                     <td>
                         <label class="label" onclick="_4()">
                             <span id="4" class="o" >
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
                     <td>
                         <label class="label" onclick="_5()">
                             <span id="5" class="o" >
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
                     <td>
                         <label class="label" onclick="_6()">
                             <span id="6" class="o">
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
@@ -85,18 +85,24 @@
                     <td>
                         <label class="label" onclick="_7()">
                             <span id="7" class="o" >
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
                     <td>
                         <label class="label" onclick="change()">
                             <span id="8" class="o">
-                                <img src="images/ttt.jpg" width="100%" />
+                                <img src="ttt.jpg" width="100%" />
                             </span>
                         </label>
                     </td>
-                    <td><label class="label" onclick="_9()"><span id="9" class="o" ><img src="images/ttt.jpg" width="100%" /></span></label></td>
+                    <td>
+                      <label class="label" onclick="_9()">
+                        <span id="9" class="o" >
+                          <img src="ttt.jpg" width="100%" />
+                        </span>
+                      </label>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -108,12 +114,12 @@
         <div style="text-align: center; direction: ltr;">
             <br />
             <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-                <img src="images/1785324981889.png" width="30" alt="Icon" />
+                <img src="1785324981889.png" width="30" alt="Icon" />
                 <h2 style="margin: 0; font-size: 28px; font-family: Tahoma, sans-serif;">Money: <span id="pool" id="reset">0</span></h2>
             </div>            
             <br />
             <label>
-                <img id="self" src="images/coin.png" width="20%" style="cursor: pointer;" onclick="increasePool()" />
+                <img id="self" src="coin.png" width="20%" style="cursor: pointer;" onclick="increasePool()" />
             </label>
             <br />
             <div class="btn-3d">
@@ -200,7 +206,7 @@
     <br />
     <section>
     <video width="100%" controls>
-        <source src="images/VID_20260601_233430.mp4" type="video/mp4" />
+        <source src="VID_20260601_233430.mp4" type="video/mp4" />
     </video>
     </section>
     <br />
