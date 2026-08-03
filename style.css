@@ -1,0 +1,75 @@
+#h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #ff4900;
+    border: 12px solid #ff7e40;
+    border-bottom: 30px solid chocolate;
+    border-left: 21px solid orange;
+    border-right: 21px solid orange;
+    background-image: url("images/Ali.jpg");
+    background-size: 100% 100%;
+}
+body {
+    background: #eaffff;
+}
+#us {
+    background-color:#ffa96a;
+    border:10px solid #ffa96a;
+    text-align: left;
+}
+hr {
+    color: orangered;
+    border: 1px solid orange;
+    border-width: 100%;
+}
+#info {
+     width: 80%;
+     height: 300;
+     border-collapse: collapse;
+}
+tr {
+    text-align: center;
+}
+th {
+    background-color: #00136880;
+    padding: 10px;
+}
+ul {
+    text-align: center;
+    direction: ltr;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+audio {
+    width: 100%;
+    height: 40px;
+}
+.song {
+    cursor: pointer;
+}
+p {
+    background-color: darkred;
+    text-align: center;
+    margin: 15px 0;
+}
+.label {
+    cursor: pointer;
+}
+.o {
+    color: blue;
+    font-size: 500%;
+}
+.x {
+    color: darkred;
+    font-size: 500%;
+}
+.no {
+    font-size: 30px;
+    background-color: white;
+    border-top: 30px solid green;
+    border-bottom: 30px solid red;
+    border-top-left-radius: 45%;
+    border-bottom-left-radius: 10%;
+    border-right: 10px solid gray;
+    
+}
