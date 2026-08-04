@@ -150,8 +150,14 @@ function checkPassword() {
         alert("رمز عبور اشتباه است!");
     }
 }
-
 function joon() {
-    alert("ببم جان شماره چه میخوای؟").innerHTML = "<img src='https://sedatoseda.com/wp-content/uploads/Rock-meme.jpg' alt='راک' />"
+    Swal.fire({
+    title: 'ببم جان شماره چه میخوای؟',
+    imageUrl: 'https://sedatoseda.com/wp-content/uploads/Rock-meme.jpg',
+    imageWidth: 500,
+    imageHeight: 200,
+    imageAlt: 'راک در تعجب',
+    confirmButtonText: 'بوتوچه'
+    });
     document.getElementById("table").innerHTML = "<span class='no'> ببم جان شماره چه میخوای؟ </span>";
 }
