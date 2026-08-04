@@ -152,5 +152,6 @@ function checkPassword() {
 }
 
 function joon() {
+    alert("ببم جان شماره چه میخوای؟").innerHTML = "<img src='https://sedatoseda.com/wp-content/uploads/Rock-meme.jpg' alt='راک' />"
     document.getElementById("table").innerHTML = "<span class='no'> ببم جان شماره چه میخوای؟ </span>";
 }
