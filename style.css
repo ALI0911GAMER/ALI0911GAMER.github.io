@@ -16,6 +16,7 @@ body {
     background-color:#ffa96a;
     border:10px solid #ffa96a;
     text-align: left;
+    direction: ltr;
 }
 hr {
     color: orangered;
@@ -45,23 +46,16 @@ audio {
     height: 40px;
 }
 .song {
-    cursor: pointer;
-}
-p {
-    background-color: darkred;
+    background-image: url('');
+}    
+#enteghad {
+    background-color: lightcoral;
     text-align: center;
     margin: 15px 0;
+    border: 10px solid darkred;
 }
 .label {
     cursor: pointer;
-}
-.o {
-    color: blue;
-    font-size: 500%;
-}
-.x {
-    color: darkred;
-    font-size: 500%;
 }
 .no {
     font-size: 30px;
@@ -71,5 +65,60 @@ p {
     border-top-left-radius: 45%;
     border-bottom-left-radius: 10%;
     border-right: 10px solid gray;
-    
+}
+.active-turn {
+    border: 3px solid black !important;
+    border-radius: 5px;
+    padding: 2px;
+}
+.tic-tac-toe-table {
+    table-layout: fixed;
+    width: 80%;
+    height: 270px;
+    margin: 0 auto;
+}
+.tic-tac-toe-table td {
+    width: 33.33%;
+    height: 90px;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-3d {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #1e8449;
+    transition: all 0.1s ease;
+}
+.btn-3d:active {
+    box-shadow: 0 0 0 #1e8449;
+    transform: translateY(5px);
+}
+.btn-3d:disabled {
+    background-color: #7f8c8d;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.btn-upgrade {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #d35400;
+    transition: all 0.1s ease;
+}
+.btn-upgrade:active {
+    box-shadow: 0 0 0 #d35400;
+    transform: translateY(4px);
 }
