@@ -159,5 +159,4 @@ function joon() {
     imageAlt: 'راک در تعجب',
     confirmButtonText: 'بوتوچه'
     });
-    document.getElementById("table").innerHTML = "<span class='no'> ببم جان شماره چه میخوای؟ </span>";
 }
