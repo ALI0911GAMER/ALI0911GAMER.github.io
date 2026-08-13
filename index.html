@@ -41,17 +41,22 @@
 
     <main>
         <hr /><br /><br />
-        <!-- بخش بازی دوز -->
+                <!-- بخش بازی دوز -->
         <section>
             <div style="text-align: center; display: flex; align-items: center; justify-content: center; gap: 15px;">
                 <img id="icon-o" class="active-turn" src="o.png" alt="icon" width="30" />
                 <h2 style="margin: 0; font-size: 28px; font-family: Tahoma, sans-serif;">TIC TAC TOE</h2>
                 <img id="icon-x" src="x.png" alt="icon" width="25" />
             </div>
-            
             <br />
-
-            <!-- جدول بازی دوز -->
+            <div class="scoreboard" id="scoreboard" ondblclick="resetScoreboard()">
+                <span>برد O: <span id="score-o">0</span></span>
+                <span>|</span>
+                <span>مساوی: <span id="mosavi">0</span></span>
+                <span>|</span>
+                <span>برد X: <span id="score-x">0</span></span>
+            </div>
+            <br />
             <div style="align-items: center;" align="center">
                 <table class="tic-tac-toe-table" cellspacing="0" id="tic-tac-toe-table">
                     <tr>
@@ -72,9 +77,10 @@
                 </table>
                 <br />
                 <button id="reset-ttt" class="btn-3d" onclick="resetTTT()" disabled>شروع مجدد دوز</button>
+                <aside class="help"><p>برای ریست شدن امتیازات دو بار روی جدول امتیازات کلیک کنید.</p></aside>
             </div>
         </section>
-
+        
         <br /><br /><hr />
         <!-- بخش بازی سکه -->
         <section>
@@ -87,11 +93,12 @@
                 <br />
                 <div style="display: flex; align-items: center; justify-content: center; gap: 25px; direction: rtl;">
                     
-                    <img id="self" src="coin.png" width="120" style="cursor: pointer;" onclick="increaseMoney()" />
+                    <img id="self" src="coin.png" width="120" style="cursor: pointer;" onclick="increaseMoney(event)" />
                 </div>
                 <div style="display: flex; align-items: center; justify-content: center; gap: 25px; direction: rtl;">
                     <button class="btn-3d" onclick="resetMoney()">Reset</button>
                     <button id="btn-upgrade" class="btn-upgrade" onclick="buyUpgrade()">ارتقا به 2 سکه (هزینه: 50سکه)</button>
+                    <button id="btn-autoclick" class="btn-upgrade" style="background-color: #8e44ad; box-shadow: 0 4px 0 #673279;" onclick="buyAutoClicker()">ربات کلیک‌کننده (سطح ۰) - هزینه: ۱۰۰</button>
                 </div>
             </div>
         </section>
