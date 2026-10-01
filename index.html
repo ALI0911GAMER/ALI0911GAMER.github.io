@@ -1,171 +1,397 @@
 <!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="fa-ir" dir="rtl">
-<head>
-    <title>اولین سایت سید بتمن!</title>
-    <link rel="icon" href="Ali.jpg" type="image/x-icon" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
-    <meta name="author" content="Ali Cheshami" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
+    <head>
+        <title>اولین سایت سید بتمن!</title>
+        <link rel="icon" href="images/Ali.jpg" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Ali Cheshami" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
 
-</head>
-<body id="body">
-    <header>
-        <div class="menu">
-            <label class="d-n-sycle" id="d-n-sycle">
-                <input type="checkbox" name="dsn" onclick="dsyclen()" />
-                <span></span>
-            </label>
-        </div>
-        <section>
-            <h1 id="h1">
-                <small> ساخته شده توسط: </small>
-                <br />        
-                <strong> علی چشامی </strong>
-            </h1>
-        </section>
-        <hr />
-        <div align="center" id="switch">
-            <h4>اگر میخواهید نام سایت را تغییر دهید:</h4>
-            <input style="padding: 8px; font-size: 16px;" type="text" id="textinput" placeholder="نام جدید:">
-            <button style="padding: 8px 15px; font-size: 16px;" onclick="changetitle()">۵۰۰ سکه</button>
-            <br /><br/>
-            <h4>سایت را هر طور دوست دارید تغییر دهید:</h4>
-            <input style="padding: 8px; font-size: 16px; text-align: left; direction: ltr;" type="text" id="codeinput" placeholder="کد های جدید:">
-            <button style="padding: 8px 15px; font-size: 16px;" onclick="runcode()">۱۰۰۰ سکه</button>
-        </div>
-        <br /><br />
-    </header>
-
-    <main>
-        <hr /><br /><br />
-                <!-- بخش بازی دوز -->
-        <section>
-            <div style="text-align: center; display: flex; align-items: center; justify-content: center; gap: 15px;">
-                <img id="icon-o" class="active-turn" src="o.png" alt="icon" width="30" />
-                <h2 style="margin: 0; font-size: 28px; font-family: Tahoma, sans-serif;">TIC TAC TOE</h2>
-                <img id="icon-x" src="x.png" alt="icon" width="25" />
+    <body id="body">
+        <header>
+            <div class="menu">
+                <label class="d-n-sycle" id="d-n-sycle">
+                    <input type="checkbox" name="dsn" onclick="dsyclen()" />
+                    <span></span>
+                </label>
             </div>
-            <br />
-            <div class="scoreboard" id="scoreboard" ondblclick="resetScoreboard()">
-                <span>برد O: <span id="score-o">0</span></span>
-                <span>|</span>
-                <span>مساوی: <span id="mosavi">0</span></span>
-                <span>|</span>
-                <span>برد X: <span id="score-x">0</span></span>
-            </div>
-            <br />
-            <div style="align-items: center;" align="center">
-                <table class="tic-tac-toe-table" cellspacing="0" id="tic-tac-toe-table">
-                    <tr>
-                        <td onclick="play('c1', 0)"><span id="c1"></span></td>
-                        <td onclick="play('c2', 1)"><span id="c2"></span></td>
-                        <td onclick="play('c3', 2)"><span id="c3"></span></td>
-                    </tr>
-                    <tr>
-                        <td onclick="play('c4', 3)"><span id="c4"></span></td>
-                        <td onclick="play('c5', 4)"><span id="c5"></span></td>
-                        <td onclick="play('c6', 5)"><span id="c6"></span></td>
-                    </tr>
-                    <tr>
-                        <td onclick="play('c7', 6)"><span id="c7"></span></td>
-                        <td onclick="play('c8', 7)"><span id="c8"></span></td>
-                        <td onclick="play('c9', 8)"><span id="c9"></span></td>
-                    </tr>
-                </table>
-                <br />
-                <button id="reset-ttt" class="btn-3d" onclick="resetTTT()" disabled>شروع مجدد دوز</button>
-                <aside class="help"><p>برای ریست شدن امتیازات دو بار روی جدول امتیازات کلیک کنید.</p></aside>
-            </div>
-        </section>
-        
-        <br /><br /><hr />
-        <!-- بخش بازی سکه -->
-        <section>
-            <div style="text-align: center;">
-                <br />
-                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; direction: ltr;">
-                    <img src="1785324981889.png" width="30" alt="Icon" />
-                    <h2 draggable="true" style="margin: 0; font-size: 28px; font-family: Tahoma, sans-serif;" ondragend="cheat()">Money: <span id="money">0</span></h2>
-            </div>            
-                <br />
-                <div style="display: flex; align-items: center; justify-content: center; gap: 25px; direction: rtl;">
-                    
-                    <img id="self" src="coin.png" width="120" style="cursor: pointer;" onclick="increaseMoney(event)" />
-                </div>
-                <div style="display: flex; align-items: center; justify-content: center; gap: 25px; direction: rtl;">
-                    <button class="btn-3d" onclick="resetMoney()">Reset</button>
-                    <button id="btn-upgrade" class="btn-upgrade" onclick="buyUpgrade()">ارتقا به 2 سکه (هزینه: 50سکه)</button>
-                    <button id="btn-autoclick" class="btn-upgrade" style="background-color: #8e44ad; box-shadow: 0 4px 0 #673279;" onclick="buyAutoClicker()">ربات کلیک‌کننده (سطح ۰) - هزینه: ۱۰۰</button>
-                </div>
-            </div>
-        </section>
-
-        <hr /><br /><input type="image" src="Ali.png" alt="">
-        <!-- مشخصات سازنده -->
-        <section>
-            <div>
-                <article>
-                    <table align="center" border="5px" bordercolor="001368" id="info">
-                        <caption>مشخصات بنده (سازنده‌ی سایت)</caption>
-                        <tr><th>نام<br />نام‌خانوادگی</th><td>علی</td><td>چشامی</td></tr>
-                        <tr><th>شغل</th><td colspan="2">دانش آموز</td></tr>
-                        <tr><th>شماره موبایل</th><td colspan="2" dir="ltr" title="کپیش نکنی!" oncopy="joon('tanz')"><span id="number">+98 993-747-5810</span></td></tr>
-                        <tr><th>کد ملی</th><td colspan="2">020-262308-4</td></tr>
-                        <tr><th>تاریخ تولد</th><td>1392/5/6 هـ.ش</td><td>2013/28/7 م</td></tr>
-                        <tr><th>وضعیت تأهل<br />تعداد همسر</th><td>خیر</td><td>ندارد</td></tr>
-                    </table>
-                </article>
+            <section>
+                <h1 id="h1">
+                    <small> ساخته شده توسط: </small>
+                    <br />
+                    <strong> علی چشامی </strong>
+                </h1>
+            </section>
+            <hr />
+            <div align="center" id="switch">
+                <h4>اگر میخواهید نام سایت را تغییر دهید:</h4>
+                <input
+                    style="padding: 8px; font-size: 16px"
+                    type="text"
+                    id="textinput"
+                    placeholder="نام جدید:"
+                />
+                <button
+                    style="padding: 8px 15px; font-size: 16px"
+                    onclick="changetitle()"
+                >
+                    ۵۰۰ سکه
+                </button>
                 <br /><br />
+                <h4>سایت را هر طور دوست دارید تغییر دهید:</h4>
+                <input
+                    style="
+                        padding: 8px;
+                        font-size: 16px;
+                        text-align: left;
+                        direction: ltr;
+                    "
+                    type="text"
+                    id="codeinput"
+                    placeholder="کد های جدید:"
+                />
+                <button
+                    style="padding: 8px 15px; font-size: 16px"
+                    onclick="runcode()"
+                >
+                    ۱۰۰۰ سکه
+                </button>
             </div>
-        </section>
-
-        <hr /><br />
-        <section>
-            <div id="pass-container" style="text-align: center; margin: 20px 0; transition: 1s;">
-                <label>برای مشاهده آهنگ‌ها رمز را وارد کنید:</label><br /><br />
-                <input onkeypress="checkPassword()" type="password" id="song-pass" placeholder="رمز عبور..." style="padding: 10px; font-size: 16px; width: 70%;" />
-            </div>
-            <div id="song-list" style="display: none;">
-                <audio controls><source src="Herobrine موزیکدل.mp3" type="audio/mp3" /></audio><br /><br />
-                <audio controls><source src="jafar_goodbye_party.mp3" type="audio/mp3" /></audio><br /><br />
-                <audio controls><source src="Jafar-Gentleman -musicdel.ir 128.mp3" type="audio/mp3" /></audio><br /><br />
-                <audio controls><source src="4b7f6edcad76723cbb07c5ed01b57dd319795018-240p.mp3" type="audio/mp3" /></audio><br /><br />
-                <audio controls><source src="Jafar-Dodakh -musicdel.ir 128 (1).mp3" type="audio/mp3" /></audio><br /><br />
-                <audio controls><source src="Jafar-Nemiay Naya -musicdel.ir 128.mp3" type="audio/mp3" /></audio>
-            </div>
-        </section>
-
-        <br /><hr /><br />
-
-        <section>
-            <video width="100%" controls loop>
-                <source src="VID_20260805_230829_531.mp4" type="video/mp4" />
-            </video>
-            <video width="100%" controls>
-                <source src="VID_20260601_233430.mp4" type="video/mp4" />
-            </video>        
-        </section>
-        <br /><br /><hr />
-
-        <section>
-            <p id="enteghad" class="enteghad">
-                ویژگی های بیشتر در آینده اضافه میشوند.
+            <br /><br />
+        </header>
+        <main>
+            <hr />
+            <br /><br />
+            <!-- بخش بازی دوز -->
+            <section>
+                <div
+                    style="
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 15px;
+                    "
+                >
+                    <img
+                        id="icon-o"
+                        class="active-turn"
+                        src="images/ o.png"
+                        alt="icon"
+                        width="30"
+                    />
+                    <h2
+                        style="
+                            margin: 0;
+                            font-size: 28px;
+                            font-family: Tahoma, sans-serif;
+                        "
+                    >
+                        TIC TAC TOE
+                    </h2>
+                    <img id="icon-x" src="images/x.png" alt="icon" width="25" />
+                </div>
                 <br />
-                لطفا انتقادات خود را به ما ایمیل کنید.
-            </p>
-        </section>
-        <hr />
-    </main>
+                <div
+                    class="scoreboard"
+                    id="scoreboard"
+                    ondblclick="resetScoreboard()"
+                >
+                    <span>برد O: <span id="score-o">0</span></span>
+                    <span>|</span>
+                    <span>مساوی: <span id="mosavi">0</span></span>
+                    <span>|</span>
+                    <span>برد X: <span id="score-x">0</span></span>
+                </div>
+                <br />
+                <div style="align-items: center" align="center">
+                    <table
+                        class="tic-tac-toe-table"
+                        cellspacing="0"
+                        id="tic-tac-toe-table"
+                    >
+                        <tr>
+                            <td onclick="play('c1', 0)">
+                                <span id="c1"></span>
+                            </td>
+                            <td onclick="play('c2', 1)">
+                                <span id="c2"></span>
+                            </td>
+                            <td onclick="play('c3', 2)">
+                                <span id="c3"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick="play('c4', 3)">
+                                <span id="c4"></span>
+                            </td>
+                            <td onclick="play('c5', 4)">
+                                <span id="c5"></span>
+                            </td>
+                            <td onclick="play('c6', 5)">
+                                <span id="c6"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td onclick="play('c7', 6)">
+                                <span id="c7"></span>
+                            </td>
+                            <td onclick="play('c8', 7)">
+                                <span id="c8"></span>
+                            </td>
+                            <td onclick="play('c9', 8)">
+                                <span id="c9"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <button
+                        id="reset-ttt"
+                        class="btn-3d"
+                        onclick="resetTTT()"
+                        disabled
+                    >
+                        شروع مجدد دوز
+                    </button>
+                    <aside class="help">
+                        <p>
+                            برای ریست شدن امتیازات دوبار روی جدول امتیازات کلیک
+                            کنید.
+                        </p>
+                    </aside>
+                </div>
+            </section>
 
-    <footer>
-        <address id="us" class="us">
-            E-mail: ali.cheshami0911@gmail.com<br /><br />
-            Microsaft accont: ali.cheshami0911@outlook.com<br /><br />
-            &copy;ALI0911GAMER
-        </address>
-    </footer>
-</body>
+            <br /><br />
+            <hr />
+            <!-- بخش بازی سکه -->
+            <section>
+                <div style="text-align: center">
+                    <br />
+                    <div
+                        style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 15px;
+                            direction: ltr;
+                        "
+                    >
+                        <img src="images/1785324981889.png" width="30" alt="Icon" />
+                        <h2
+                            draggable="true"
+                            style="
+                                margin: 0;
+                                font-size: 28px;
+                                font-family: Tahoma, sans-serif;
+                                user-select: none;
+                            "
+                            ondragend="cheat()"
+                        >
+                            Money: <span id="money">0</span>
+                        </h2>
+                    </div>
+                    <br />
+                    <div
+                        style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 25px;
+                            direction: rtl;
+                        "
+                    >
+                        <img
+                            id="self"
+                            src="images/coin.png"
+                            width="120"
+                            style="cursor: pointer; margin: 10px"
+                            onclick="increaseMoney(event)"
+                        />
+                    </div>
+                    <div
+                        style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 25px;
+                            direction: rtl;
+                        "
+                    >
+                        <button class="btn-3d" onclick="resetMoney()">
+                            Reset
+                        </button>
+                        <button
+                            id="btn-upgrade"
+                            class="btn-upgrade"
+                            onclick="buyUpgrade()"
+                        >
+                            ارتقا به 2 سکه (هزینه: 50سکه)
+                        </button>
+                        <button
+                            id="btn-autoclick"
+                            class="btn-upgrade"
+                            style="
+                                background-color: #8e44ad;
+                                box-shadow: 0 4px 0 #673279;
+                            "
+                            onclick="buyAutoClicker()"
+                        >
+                            ربات کلیک‌کننده (سطح 0) - هزینه: 100سکه
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <hr />
+            <br />
+            <!-- مشخصات سازنده -->
+            <section>
+                <div>
+                    <article>
+                        <table
+                            align="center"
+                            border="5px"
+                            bordercolor="001368"
+                            id="info"
+                        >
+                            <caption>
+                                مشخصات بنده (سازنده‌ی سایت)
+                            </caption>
+                            <tr>
+                                <th>نام<br />نام‌خانوادگی</th>
+                                <td>علی</td>
+                                <td>چشامی</td>
+                            </tr>
+                            <tr>
+                                <th>شغل</th>
+                                <td colspan="2">دانش آموز</td>
+                            </tr>
+                            <tr>
+                                <th>شماره موبایل</th>
+                                <td
+                                    colspan="2"
+                                    dir="ltr"
+                                    title="کپیش نکنی!"
+                                    oncopy="joon('tanz')"
+                                >
+                                    <span id="number">+98 993-747-5810</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>کد ملی</th>
+                                <td colspan="2">020-262308-4</td>
+                            </tr>
+                            <tr>
+                                <th>تاریخ تولد</th>
+                                <td>1392/5/6 هـ.ش</td>
+                                <td>2013/28/7 م</td>
+                            </tr>
+                            <tr>
+                                <th>وضعیت تأهل<br />تعداد همسر</th>
+                                <td>خیر</td>
+                                <td>ندارد</td>
+                            </tr>
+                        </table>
+                    </article>
+                    <br /><br />
+                </div>
+            </section>
+
+            <hr />
+            <br />
+            <section>
+                <div
+                    id="pass-container"
+                    style="text-align: center; margin: 20px 0; transition: 1s"
+                >
+                    <label>برای مشاهده آهنگ‌ها رمز را وارد کنید:</label
+                    ><br /><br />
+                    <input
+                        onkeypress="checkPassword()"
+                        type="password"
+                        id="song-pass"
+                        placeholder="رمز عبور..."
+                        style="padding: 10px; font-size: 16px; width: 70%"
+                    />
+                </div>
+                <div id="song-list" style="display: none">
+                    <audio controls>
+                        <source
+                            src="audio/Herobrine موزیکدل.mp3"
+                            type="audio/mp3"
+                        /></audio
+                    ><br /><br />
+                    <audio controls>
+                        <source
+                            src="audio/jafar_goodbye_party.mp3"
+                            type="audio/mp3"
+                        /></audio
+                    ><br /><br />
+                    <audio controls>
+                        <source
+                            src="audio/Jafar-Gentleman -musicdel.ir 128.mp3"
+                            type="audio/mp3"
+                        /></audio
+                    ><br /><br />
+                    <audio controls>
+                        <source
+                            src="audio/4b7f6edcad76723cbb07c5ed01b57dd319795018-240p.mp3"
+                            type="audio/mp3"
+                        /></audio
+                    ><br /><br />
+                    <audio controls>
+                        <source
+                            src="audio/Jafar-Dodakh -musicdel.ir 128 (1).mp3"
+                            type="audio/mp3"
+                        /></audio
+                    ><br /><br />
+                    <audio controls>
+                        <source
+                            src="audio/Jafar-Nemiay Naya -musicdel.ir 128.mp3"
+                            type="audio/mp3"
+                        />
+                    </audio>
+                </div>
+            </section>
+
+            <br />
+            <hr />
+            <br />
+
+            <section>
+                <video width="100%" controls loop>
+                    <source
+                        src="images/VID_20260805_230829_531.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+                <video width="100%" controls>
+                    <source src="images/VID_20260601_233430.mp4" type="video/mp4" />
+                </video>
+            </section>
+            <br /><br />
+            <hr />
+
+            <section>
+                <p id="enteghad" class="enteghad">
+                    ویژگی های بیشتر در آینده اضافه میشوند.
+                    <br />
+                    لطفا انتقادات خود را به ما ایمیل کنید.
+                </p>
+            </section>
+            <hr />
+        </main>
+        <footer>
+            <address id="us" class="us">
+                E-mail: ali.cheshami0911@gmail.com<br /><br />
+                Microsaft accont: ali.cheshami0911@outlook.com<br /><br />
+                &copy;ALI0911GAMER
+            </address>
+        </footer>
+    </body>
 </html>
