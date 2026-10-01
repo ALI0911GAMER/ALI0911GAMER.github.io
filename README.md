@@ -1,2 +1,2 @@
-<a href="ali0911gamer.github.io>ALI0911GAMER.github.io"</a>
+https://ali0911gamer.github.io
 &copy; ALI0911GAMER
